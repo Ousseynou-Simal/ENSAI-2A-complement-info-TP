@@ -5,7 +5,7 @@ from business_object.statistic import Statistic
 class TestAllRounderPokemon:
 
     def test_get_pokemon_attack_coef(self):
-        # Réalisation du test 
+        # Réalisation du test
 
         # GIVEN
         pokemon = AllRounderPokemon(stat_current=Statistic(sp_atk=300, sp_def=300))
@@ -13,7 +13,7 @@ class TestAllRounderPokemon:
         # WHEN
         multiplier = pokemon.get_pokemon_attack_coef()
 
-        # THEN 
+        # THEN
         assert multiplier == 4
 
 
