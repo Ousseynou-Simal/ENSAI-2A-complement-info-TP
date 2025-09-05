@@ -3,7 +3,7 @@ from business_object.pokemon.attacker_pokemon import AttackerPokemon
 
 
 class AbstractAttack(ABC):
-    def __init__(self, power, name, description):
+    def __init__(self, power=0, name=None, description=None):
         self._power = power
         self._name = name
         self._description = description

@@ -68,6 +68,9 @@ class AbstractPokemon(ABC):
     # Getters and Setters
     # -------------------------------------------------------------------------
 
+    # Les property permet d'accéder directement on information de l'objet 'Statistic' grâce a la 
+    # manipulation 'self.<attribut>'
+
     @property
     def attack(self):
         return self._stat_max.attack
