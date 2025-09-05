@@ -16,8 +16,10 @@ class AbstractPokemon(ABC):
     # Constructor
     # -------------------------------------------------------------------------
 
+    # On supprime l'attribut type de pokemon car le type est préciser directement dans la classe
+    # fille
     def __init__(
-        self, stat_max=None, stat_current=None, level=0, name=None, type_pk=None
+        self, stat_max=None, stat_current=None, level=0, name=None
     ):
         # -----------------------------
         # Attributes
@@ -26,7 +28,7 @@ class AbstractPokemon(ABC):
         self._stat_current: Statistic = stat_current
         self._level: int = level
         self._name: str = name
-        self._type: str = type_pk
+        # self._type: str = type_pk
 
     # -------------------------------------------------------------------------
     # Methods

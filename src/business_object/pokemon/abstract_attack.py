@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from business_object.pokemon.attacker_pokemon import AttackerPokemon
 
 
 class AbstractAttack(ABC):
@@ -8,7 +9,7 @@ class AbstractAttack(ABC):
         self._description = description
 
     @abstractmethod
-    def compute_damage(self, APkm) -> int:
+    def compute_damage(self, APkm1: AttackerPokemon, APkm2: AttackerPokemon) -> int:
         pass
 
 # Création de la clase

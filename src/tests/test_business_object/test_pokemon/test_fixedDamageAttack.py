@@ -1,4 +1,5 @@
 from business_object.pokemon.fixedDamageAttack import FixedDamageAttack
+from business_object.pokemon.attacker_pokemon import AttackerPokemon
 
 
 class TestFixedDamageAttack:
@@ -8,7 +9,10 @@ class TestFixedDamageAttack:
         attaque = FixedDamageAttack(power=10, name='attake 1', description='text')
 
         # WHEN
-        power = attaque.compute_damage()
+        power = attaque.compute_damage(
+            APKm1=AttackerPokemon(),
+            APKm2=AttackerPokemon()
+        )
 
         # THEN
         assert power == 10
